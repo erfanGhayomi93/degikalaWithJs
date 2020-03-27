@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="menu">
+        <div class="banner"></div>
+        <div class="menuCenter">
+            <div class="left-center-menu">
+                <div class="shopping-card">
+                    <a href=""><i class="fa fa-shopping-cart"></i>
+                    </a></div>
+                <div class="login"><a class="text-muted" href="./register.html">
+                    <span>ورود به حساب کاربری</span><span class="loginFont"><i class="fa fa-sign-in-alt"></i></span>
+                </a>
+                </div>
+            </div>
+
+            <div class="right-center-menu">
+                <div class="form-group search">
+                    <input class="form-control search_result" id="search" type="text">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="logo">
+                    <a href="./"><img src="assets/images/logo1.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="menuBottom">
+            <div class="left-bottom-menu text-muted">
+                <span class="fa fa-location-arrow"></span>
+                <span>لطفا شهر و استان خود را انتخاب کنید</span>
+            </div>
+            <div class="right-bottom-menu">
+                <nav class="navbar">
+                    <ul class="nav align-items-center">
+                        <i class="fas fa-bars"></i>
+                        <li>
+                            <a href="">دسته‌بندی کالاها</a>
+                        </li>
+                        <li><a href="">سوپر مارکت</a></li>
+                        <li><a href="">تخفیف و پیشنهادات</a></li>
+                        <li><a href="">سوالی دارید؟</a></li>
+                        <li><a href="">فروشنده شوید</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="row">
+            <div class="col-2 right-content">
+                <div class="row">
+                    <div class="ads-product c-box">
+                        <img src="assets/images/ads1.jpg" alt="">
+                        <p class="text-right pt-2">
+                            گوشی موبایل انرجایزر مدل Energy E11 دو سیم کارت
+                        </p>
+                        <p class="text-left">
+                            <span class="font-weight-bold">۱۹۹,۰۰۰</span>
+                            تومان
+                        </p>
+                        <span class="bullhorn">ads<i class="fas fa-bullhorn"></i></span>
+                    </div>
+
+                    <div class="c-box">
+                        <p class="c-boxHeader">دسته بندی نتایج</p>
+                        <div class="mt-2">
+                            <p class="pr-2"><i class="pl-1 fa fa-angle-left"></i>
+                                کالای دیجیتال</p>
+                            <p class="pr-3"><i class="pl-1 fa fa-angle-down"></i>
+                                موبایل</p>
+                            <p class="pr-4 font-weight-bold text-dark">گوشی موبایل</p>
+                        </div>
+                    </div>
+
+                    <div class="c-box">
+                        <p class="c-boxHeader">جستجو در نتایج:</p>
+                        <div class="searchResult">
+                            <input type="text" id="searchResult" class="form-control" placeholder="نام محصول یا برند …">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="c-box">
+                        <p class="c-boxHeader brand_toggle">برند
+                            <i class="fa fa-angle-up"></i>
+                        </p>
+                        <div>
+                            <div class="searchResult">
+                                <input type="text" class="form-control" placeholder="جستجوی نام برند…">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="custom-item">
+                                <ul id="show_brand"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="c-box">
+                        <p class="c-boxHeader brand_toggle">فروشنده
+                            <i class="fa fa-angle-up"></i>
+                        </p>
+
+                        <div>
+                            <div class="custom-item">
+                                <ul id="sellerHtml">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                    <div class="c-box">-->
+                    <!--                        <p class="c-boxHeader">-->
+                    <!--                            <label class="switch">-->
+                    <!--                                <input type="checkbox">-->
+                    <!--                                <span class="slider round"></span>-->
+                    <!--                            </label>-->
+                    <!--                        </p>-->
+                    <!--                    </div>-->
+                </div>
+            </div>
+
+            <div class="col-10 left-content">
+                <div class="row start-left-content">
+                    <div class="col-9">
+                        فروشگاه اینترنتی دیجی‌کالا / کالای دیجیتال / موبایل / گوشی موبایل
+                    </div>
+                    <div class="col-3 text-left">
+                        <span id="allItem"></span>
+                        کالا
+                    </div>
+                </div>
+                <div class="row filter">
+                    <span class="sort">مرتب سازی بر اساس : </span>
+                    <span class="filter_item active_filter">پر فروش ترین</span>
+                    <span class="filter_item">مرتبط ترین</span>
+                    <span class="filter_item">پر بازدیدترین</span>
+                    <span class="filter_item">جدیدترین</span>
+                    <span class="filter_item">ارزان ترین</span>
+                    <span class="filter_item">گران ترین</span>
+                </div>
+                <div class="row" id="leftContent"></div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Swiper -->
+            <div class="swiper_main">
+                <div class="swiper-container swiper-container-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/image1.jpg" alt="">
+                            <p class="mt-2">گوشی موبایل سامسونگ مدل Galaxy A80 SM-A805F/DS دو ...</p>
+                            <p   class="price">۶,۳۴۵,۰۰۰ تومان</p>
+
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+<!--                    <div class="swiper-pagination"></div>-->
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_1">
+            <div>
+                <article><img src="assets/images/svg/8f570b58.svg" alt="">
+                    <p>تحویل اکسپرس</p>
+                </article>
+            </div>
+            <div>
+                <article><img src="assets/images/svg/a9286d2f.svg" alt="">
+                    <p>پشتیبانی ۲۴ ساعته</p>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <img src="assets/images/svg/22414818.svg" alt="">
+                    <p>پرداخت در محل</p>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <img src="assets/images/svg/514926b1.svg" alt="">
+                    <p>۷ روز ضمانت بازگشت</p>
+                </article>
+            </div>
+            <div>
+                <article>
+                    <img src="assets/images/svg/fdb293e6.svg" alt="">
+                    <p>ضمانت اصل‌بودن کالا</p>
+                </article>
+            </div>
+        </div>
+        <div class="footer_2">
+            <div class="item">
+                <p class="title">راهنمای خرید از دیجیکالا</p>
+                <ul>
+                    <li>نحوه ثبت سفارش</li>
+                    <li>رویه ارسال سفارش</li>
+                    <li>شیوه پرداخت</li>
+                </ul>
+            </div>
+            <div class="item">
+                <p class="title">خدمات مشتریان</p>
+                <ul>
+                    <li>پاسخ به پرسش های متداول</li>
+                    <li>رویه های بازگرداندن کالا</li>
+                    <li>شرایط استفاده</li>
+                    <li>حریم خصوصی</li>
+                    <li>گزارش باگ</li>
+                </ul>
+            </div>
+            <div class="item">
+                <p class="title">با دیجی کالا</p>
+                <ul>
+                    <li>اتاق خبر دیجی کالا</li>
+                    <li>فروش در دیجی کالا</li>
+                    <li>فرصت های شغلی</li>
+                    <li>تماس با دیجی کالا</li>
+                    <li>درباره دیجی کالا</li>
+                </ul>
+            </div>
+            <div class="item">
+                <p class="title">از تخفیف ها و جدیدترین های دیجی کالا باخبر شوید:</p>
+                <div class="news">
+                    <input type="text" class="form-control" placeholder="آدرس ایمیل خود را وارد کنید">
+                    <button class="text-light btn btn-primary buttonNews">ارسال</button>
+                </div>
+                <div class="social">
+                    <p class="title">دیجی کالا را در صفحه های اجتمایی دنبال کنید:</p>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer_3">
+            <div>
+                <p>هفت روز هفته، 24 ساعت شبانه روز پاسخو شما هستیم <span class="pr-3"> شماره تماس: 61930000-021</span>
+                </p>
+                <p>
+                    <span>آدرس ایمیل : info@digikala.com</span>
+                </p>
+            </div>
+            <div>
+                <img src="assets/images/svg/dd753f51.png" alt="">
+                <img src="assets/images/svg/1090a120.png" alt="">
+                <img src="assets/images/svg/c4abfc14.png" alt="">
+            </div>
+        </div>
+        <div class="footer_4">
+            <div><img src="assets/images/svg/0b0d3f0a.svg" alt=""></div>
+            <div><img src="assets/images/svg/964edb61.svg" alt=""></div>
+            <div><img src="assets/images/svg/6b24b899.svg" alt=""></div>
+            <div><img src="assets/images/svg/c8cfebe7.svg" alt=""></div>
+            <div><img src="assets/images/svg/0feb6326.svg" alt=""></div>
+        </div>
+        <div class="footer_5">
+            <p class="mb-0 mt-2">
+                استفاده از مطالب فروشگاه اینترنتی دیجی‌کالا فقط برای مقاصد غیرتجاری و با ذکر منبع
+                بلامانع است. کلیه حقوق این سایت متعلق به شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) می‌باشد.
+            </p>
+        </div>
+    </footer>
+</div>
+
+<!--<script src="assets/js/bootstrap.min.js"></script>-->
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/product.js"></script>
+<script src="assets/js/left-content.js"></script>
+<script src="assets/js/right_content.js"></script>
+<script src="assets/js/swiper_custom.js"></script>
+</body>
+</html>
